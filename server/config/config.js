@@ -65,7 +65,7 @@ export const config = {
   sync: {
     interval: 1000, // Default sync interval in milliseconds
     retryAttempts: 3, // Number of retry attempts for failed syncs
-},
+  },
   kiosk: {
     targetUrl: process.env.KIOSK_URL, // Target URL for the kiosk
     user: process.env.KIOSK_USER || 'kiosk',                         
@@ -89,6 +89,26 @@ export const config = {
     port: process.env.FRONTEND_PORT || 5173,
     host: process.env.FRONTEND_HOST || '127.0.0.1'
   },
+  cache: {
+  // Browser cache settings
+  browser: {
+    maxAge: 86400,        // Cache lifetime in seconds
+    revalidate: true,     // Enable revalidation
+    etags: true           // Enable ETag support
+  },
+  // Server cache settings
+  server: {
+    mediaCache: {
+      maxSize: '1GB',     // Maximum cache size
+      cleanupInterval: '1h' // Cache cleanup interval
+    },
+    metadataCache: {
+      ttl: 300,           // Time-to-live in seconds
+      checkPeriod: 600    // Cleanup check interval
+    }
+  }
+}
+
 };
 
 export default config;

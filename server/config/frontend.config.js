@@ -1,6 +1,6 @@
 export const frontendConfig = {
     info: {
-        location: "Friedrichshafen", // Location setting for geolocation services
+        location: "Heidenheim an der Brenz", // Location setting for geolocation services
     },
     slideshow: {
         watchInterval: 1000, // Interval for watching media files in downloadPath in milliseconds
@@ -14,7 +14,7 @@ export const frontendConfig = {
         enabled: true, // Enable or disable the schedule feature
         onTime: '07:35', // Time to turn on the slideshow (24-hour format)
         offTime: '19:30', // Time to turn off the slideshow (24-hour format)
-        days: [1, 2, 3, 4, 5], // Days to run the slideshow (1 for Monday, ..., 7 for Sunday)
+        days: [1, 2, 3, 4, 5, 6], // Days to run the slideshow (1 for Monday, ..., 7 for Sunday)
         vacationPeriods: [
             { start: '24.06.2024', end: '24.07.2024' }, // Example vacation period
         ],
